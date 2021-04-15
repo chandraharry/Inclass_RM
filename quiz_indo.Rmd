@@ -77,7 +77,7 @@ ___
 *Referensi Opsi Bahasa Inggris:*
   - [ ] The R-squared does not tell us about the quality of our model fit, we should use p-value instead
   - [ ] The R-squared approximates 0.44, indicating a reasonable fit (the closer to 0 the better)
-  - [ ] The R-squared approximates 0.44, indicating a poor fit (the closer to 1 the better)
+  - [X] The R-squared approximates 0.44, indicating a poor fit (the closer to 1 the better)
 ___
 
 ## Feature Selection dengan Stepwise Regression
@@ -98,8 +98,8 @@ summary(model_backward)
 ___
 4. Berdasarkan *summary* dari model terbaik, pernyataan mana yang **tidak tepat**?
   - [ ] Peningkatan 1 poin dari police_exp60 akan meningkatkan nilai crime_rate sebesar 10,265
-  - [X] Peningkatan 1 poin dari unemploy_m24 akan menurunkan nilai crime_rate sebesar 6,087
-  - [ ] Peningkatan 1 poin dari mean_education akan menurunkan nilai crime_rate sebesar 18.01
+  - [ ] Peningkatan 1 poin dari unemploy_m24 akan menurunkan nilai crime_rate sebesar 6,087
+  - [X] Peningkatan 1 poin dari mean_education akan menurunkan nilai crime_rate sebesar 18.01
   - [ ] Adjusted R-squared adalah metrics yang lebih baik untuk mengevaluasi model di atas dibandingkan Multiple R-squared
   
 *Referensi Opsi Bahasa Inggris:*
