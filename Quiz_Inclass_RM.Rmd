@@ -1,1 +1,186 @@
 
+Show in New Window
+Description:df[,16] [6 x 16]
+m_per1000f
+<int>
+state_pop
+<int>
+nonwhites_per1000
+<int>
+unemploy_m24
+<int>
+unemploy_m39
+<int>
+gdp
+<int>
+inequality
+<int>
+prob_prison
+<dbl>
+time_prison
+<dbl>
+crime_rate
+<int>
+950	33	301	108	41	394	261	0.084602	26.2011	791
+1012	13	102	96	36	557	194	0.029599	25.2999	1635
+969	18	219	94	33	318	250	0.083401	24.3006	578
+994	157	80	102	39	673	167	0.015801	29.9012	1969
+985	18	30	91	20	578	174	0.041399	21.2998	1234
+964	25	44	84	29	689	126	0.034201	20.9995	682
+6 rows | 8-17 of 16 columns
+Show in New Window
+
+Show in New Window
+
+Call:
+lm(formula = crime_rate ~ police_exp59, data = crime)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-595.58 -156.76   12.29  146.74  593.74 
+
+Coefficients:
+             Estimate Std. Error t value    Pr(>|t|)    
+(Intercept)   165.164    130.427   1.266       0.212    
+police_exp59    9.222      1.537   6.001 0.000000311 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 291.4 on 45 degrees of freedom
+Multiple R-squared:  0.4445,	Adjusted R-squared:  0.4322 
+F-statistic: 36.01 on 1 and 45 DF,  p-value: 0.0000003114
+
+Show in New Window
+
+Call:
+lm(formula = crime_rate ~ percent_m + mean_education + police_exp60 + 
+    m_per1000f + unemploy_m24 + unemploy_m39 + inequality + prob_prison, 
+    data = crime)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-444.70 -111.07    3.03  122.15  483.30 
+
+Coefficients:
+                Estimate Std. Error t value     Pr(>|t|)    
+(Intercept)    -6426.101   1194.611  -5.379 0.0000040395 ***
+percent_m          9.332      3.350   2.786      0.00828 ** 
+mean_education    18.012      5.275   3.414      0.00153 ** 
+police_exp60      10.265      1.552   6.613 0.0000000826 ***
+m_per1000f         2.234      1.360   1.642      0.10874    
+unemploy_m24      -6.087      3.339  -1.823      0.07622 .  
+unemploy_m39      18.735      7.248   2.585      0.01371 *  
+inequality         6.133      1.396   4.394 0.0000863344 ***
+prob_prison    -3796.032   1490.646  -2.547      0.01505 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 195.5 on 38 degrees of freedom
+Multiple R-squared:  0.7888,	Adjusted R-squared:  0.7444 
+F-statistic: 17.74 on 8 and 38 DF,  p-value: 0.0000000001159
+
+Show in New Window
+
+Call:
+lm(formula = crime_rate ~ ., data = crime)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-395.74  -98.09   -6.69  112.99  512.67 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(>|t|)    
+(Intercept)          -5984.2876  1628.3184  -3.675 0.000893 ***
+percent_m                8.7830     4.1714   2.106 0.043443 *  
+is_south                -3.8035   148.7551  -0.026 0.979765    
+mean_education          18.8324     6.2088   3.033 0.004861 ** 
+police_exp60            19.2804    10.6110   1.817 0.078892 .  
+police_exp59           -10.9422    11.7478  -0.931 0.358830    
+labour_participation    -0.6638     1.4697  -0.452 0.654654    
+m_per1000f               1.7407     2.0354   0.855 0.398995    
+state_pop               -0.7330     1.2896  -0.568 0.573845    
+nonwhites_per1000        0.4204     0.6481   0.649 0.521279    
+unemploy_m24            -5.8271     4.2103  -1.384 0.176238    
+unemploy_m39            16.7800     8.2336   2.038 0.050161 .  
+gdp                      0.9617     1.0367   0.928 0.360754    
+inequality               7.0672     2.2717   3.111 0.003983 ** 
+prob_prison          -4855.2658  2272.3746  -2.137 0.040627 *  
+time_prison             -3.4790     7.1653  -0.486 0.630708    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 209.1 on 31 degrees of freedom
+Multiple R-squared:  0.8031,	Adjusted R-squared:  0.7078 
+F-statistic: 8.429 on 15 and 31 DF,  p-value: 0.0000003539
+
+Show in New Window
+
+	Shapiro-Wilk normality test
+
+data:  model_backward$residuals
+W = 0.98511, p-value = 0.8051
+
+Show in New Window
+
+	studentized Breusch-Pagan test
+
+data:  model_backward
+BP = 13.51, df = 8, p-value = 0.09546
+
+Show in New Window
+
+Show in New Window
+
+Call:
+lm(formula = crime_rate ~ percent_m + mean_education + police_exp60 + 
+    m_per1000f + unemploy_m24 + unemploy_m39 + inequality + prob_prison, 
+    data = crime)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-444.70 -111.07    3.03  122.15  483.30 
+
+Coefficients:
+                Estimate Std. Error t value     Pr(>|t|)    
+(Intercept)    -6426.101   1194.611  -5.379 0.0000040395 ***
+percent_m          9.332      3.350   2.786      0.00828 ** 
+mean_education    18.012      5.275   3.414      0.00153 ** 
+police_exp60      10.265      1.552   6.613 0.0000000826 ***
+m_per1000f         2.234      1.360   1.642      0.10874    
+unemploy_m24      -6.087      3.339  -1.823      0.07622 .  
+unemploy_m39      18.735      7.248   2.585      0.01371 *  
+inequality         6.133      1.396   4.394 0.0000863344 ***
+prob_prison    -3796.032   1490.646  -2.547      0.01505 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 195.5 on 38 degrees of freedom
+Multiple R-squared:  0.7888,	Adjusted R-squared:  0.7444 
+F-statistic: 17.74 on 8 and 38 DF,  p-value: 0.0000000001159
+
+Show in New Window
+     percent_m mean_education   police_exp60     m_per1000f   unemploy_m24   unemploy_m39     inequality    prob_prison 
+      2.131963       4.189684       2.560496       1.932367       4.360038       4.508106       3.731074       1.381879 
+Show in New Window
+'data.frame':	9 obs. of  16 variables:
+ $ percent_m           : int  123 177 152 124 148 157 139 128 140
+ $ is_south            : int  0 1 1 0 0 1 1 0 0
+ $ mean_education      : int  102 87 87 105 122 90 88 113 93
+ $ police_exp60        : int  97 58 57 121 72 65 46 67 55
+ $ police_exp59        : int  87 56 53 116 66 62 41 60 54
+ $ labour_participation: int  526 638 530 580 601 553 480 624 535
+ $ m_per1000f          : int  948 974 986 966 998 955 968 972 1045
+ $ state_pop           : int  113 24 30 101 9 39 19 28 6
+ $ nonwhites_per1000   : int  76 349 72 106 19 286 49 10 20
+ $ unemploy_m24        : int  124 76 92 77 84 81 135 77 135
+ $ unemploy_m39        : int  50 28 43 35 20 28 53 25 40
+ $ gdp                 : int  572 382 405 657 590 421 457 507 453
+ $ inequality          : int  158 254 264 170 144 239 249 206 200
+ $ prob_prison         : num  0.0207 0.0452 0.0691 0.0162 0.0251 ...
+ $ time_prison         : num  37.4 31.7 22.7 41.6 30 ...
+ $ crime_rate          : int  653 831 798 1674 880 856 455 511 373
+Show in New Window
+[1] 46447.42
+Show in New Window
+        1         2         3         4         5         6 
+ 745.0201 1012.3317  949.8039 1190.7017  772.4885  686.1097 
